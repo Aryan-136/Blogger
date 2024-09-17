@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Blog</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>CyberSecure Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-
 <body>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" title="Toggle dark mode">🌙</button>
+
     <!-- Navbar -->
     <header>
         <nav>
@@ -24,92 +25,51 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Welcome to CyberSecure Blog</h2>
-            <p>Your go-to source for the latest in cybersecurity.</p>
-            <a href="#blogs" class="btn">Explore Blogs</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <section id="home" class="section fade-in">
+            <h1>Welcome to CyberSecure Blog</h1>
+            <p>Your go-to destination for the latest in cybersecurity trends, tips, and tutorials.</p>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
+        <section id="about" class="section fade-in">
             <h2>About Us</h2>
-            <p>We provide insights and updates on cybersecurity to keep you informed and secure.</p>
-        </div>
-    </section>
+            <p>We are dedicated to providing up-to-date and insightful articles on cybersecurity, hacking, and everything in between.</p>
+        </section>
 
-    <!-- Blog Section -->
-    <section id="blogs" class="blogs">
-        <div class="container">
+        <section id="blogs" class="section fade-in">
             <h2>Latest Blogs</h2>
-            <div class="blog-post">
-                <h3><a href="#">Understanding Cybersecurity Threats</a></h3>
-                <p class="post-meta">Posted on September 20, 2024</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
-                <a href="#" class="read-more">Read More</a>
+            <div class="blog-card">
+                <h3>Understanding DDoS Attacks</h3>
+                <p>An in-depth look at how DDoS attacks work and how to defend against them.</p>
             </div>
-            <div class="blog-post">
-                <h3><a href="#">Top 10 Cybersecurity Tips</a></h3>
-                <p class="post-meta">Posted on September 15, 2024</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
-                <a href="#" class="read-more">Read More</a>
+            <div class="blog-card">
+                <h3>Top Cybersecurity Practices for 2024</h3>
+                <p>Learn the best cybersecurity practices to protect your business in 2024.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Categories Section -->
-    <section id="categories" class="categories">
-        <div class="container">
+        <section id="categories" class="section fade-in">
             <h2>Categories</h2>
             <ul>
-                <li><a href="#">Cyber Threats</a></li>
-                <li><a href="#">Data Protection</a></li>
-                <li><a href="#">Security Tips</a></li>
-                <li><a href="#">Tech News</a></li>
+                <li><a href="#">Network Security</a></li>
+                <li><a href="#">Ethical Hacking</a></li>
+                <li><a href="#">Cyber Laws</a></li>
+                <li><a href="#">DDoS Protection</a></li>
             </ul>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form id="contact-form" action="submit_form.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 CyberSecure Blog. All rights reserved.</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
+        <p>&copy; 2024 CyberSecure Blog. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Disclaimer</a></li>
+        </ul>
     </footer>
 
-    <!-- Scroll-to-Top Button -->
-    <button id="scroll-to-top">&#9650;</button>
-
-    <script src="script.js"></script>
+    <button id="scroll-to-top" title="Go to top">↑</button>
 </body>
-
 </html>
