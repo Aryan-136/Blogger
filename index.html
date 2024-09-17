@@ -1,113 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Blog</title>
+    <title>My Blog Website</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
 
-    <!-- Header and Navigation -->
-    <header id="home">
-        <div class="container">
-            <h1>Welcome to My Blog</h1>
-            <p>Your go-to source for insights, tips, and inspiration.</p>
-            <a href="#contact" class="btn">Contact Me</a>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>My Blog</h1>
         </div>
-        <button id="navbar-toggle">&#9776;</button>
-        <nav id="navbar">
+        <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blogs">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button id="navbar-toggle">&#9776;</button>
     </header>
 
+    <!-- Hero Section (Home) -->
+    <section id="home" class="hero">
+        <h2>Welcome to My Blog</h2>
+        <p>Explore the latest trends, insights, and stories from the tech world.</p>
+        <a href="#blogs" class="btn">Read the Blog</a>
+    </section>
+
     <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I’m Aryan, a passionate blogger and web developer. I write about technology, design, and cybersecurity. Stay tuned for weekly updates!</p>
-        </div>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello, I'm Aryan Pandya, a passionate tech blogger. Follow my blog to keep up with tech trends, coding tips, and more.</p>
     </section>
 
     <!-- Blog Section -->
-    <section id="blog" class="section">
-        <div class="container">
-            <h2>Blog</h2>
-            <div class="filters">
-                <button data-filter="all">All</button>
-                <button data-filter="tech">Tech</button>
-                <button data-filter="design">Design</button>
-                <button data-filter="security">Cybersecurity</button>
-            </div>
-            <div class="blog-posts">
-                <div class="post tech">
-                    <h3>Latest Tech Trends</h3>
-                    <p>Exploring the emerging trends in technology this year...</p>
-                    <a href="#">Read More</a>
-                </div>
-                <div class="post design">
-                    <h3>Designing for the Future</h3>
-                    <p>Understanding the principles of modern web design...</p>
-                    <a href="#">Read More</a>
-                </div>
-                <div class="post security">
-                    <h3>Protecting Your Digital Footprint</h3>
-                    <p>Cybersecurity strategies everyone should know...</p>
-                    <a href="#">Read More</a>
-                </div>
-                <!-- Add more blog posts here -->
-            </div>
-        </div>
+    <section id="blogs" class="blogs">
+        <h2>Latest Blog Posts</h2>
+
+        <!-- Blog Post 1 -->
+        <article class="blog-post">
+            <h3><a href="blog-post-1.html">How to Stay Ahead in Cybersecurity</a></h3>
+            <p class="post-meta">Posted on September 17, 2024 by Aryan Pandya</p>
+            <p>In today’s digital age, cybersecurity is more important than ever. Learn how to protect yourself from the latest threats.</p>
+            <a href="blog-post-1.html" class="read-more">Read More</a>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="blog-post">
+            <h3><a href="blog-post-2.html">Top Programming Languages in 2024</a></h3>
+            <p class="post-meta">Posted on September 10, 2024 by Aryan Pandya</p>
+            <p>Which programming languages are dominating the tech world in 2024? Check out our comprehensive guide!</p>
+            <a href="blog-post-2.html" class="read-more">Read More</a>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="blog-post">
+            <h3><a href="blog-post-3.html">The Future of AI and Automation</a></h3>
+            <p class="post-meta">Posted on September 1, 2024 by Aryan Pandya</p>
+            <p>Discover how AI is changing industries and creating new opportunities for automation in various sectors.</p>
+            <a href="blog-post-3.html" class="read-more">Read More</a>
+        </article>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <p>Here are some of the latest projects I’ve worked on in web development, design, and cybersecurity.</p>
-            <div class="portfolio-items">
-                <!-- Example Project -->
-                <div class="project-item">
-                    <h3>Project Title</h3>
-                    <p>Short project description.</p>
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </div>
+    <!-- Pagination (For multiple pages of blog posts) -->
+    <div class="pagination">
+        <a href="#">&laquo; Previous</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Next &raquo;</a>
+    </div>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="#">Cybersecurity</a></li>
+            <li><a href="#">Programming</a></li>
+            <li><a href="#">AI & Machine Learning</a></li>
+            <li><a href="#">Web Development</a></li>
+        </ul>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form" action="your-server-endpoint" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="your-server-endpoint" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Aryan Pandya. All rights reserved.</p>
+            <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/aryanpandya/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/aryanpandya" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/aryanpandya" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
 
     <!-- Scroll-to-Top Button -->
     <button id="scroll-to-top">&#9650;</button>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Aryan Pandya. All rights reserved. <a href="https://www.linkedin.com/in/aryanpandya/" target="_blank">LinkedIn</a></p>
-    </footer>
-
     <script src="script.js"></script>
+
 </body>
+
 </html>
