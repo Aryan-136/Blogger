@@ -28,6 +28,9 @@ header {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo h1 {
@@ -36,8 +39,12 @@ header .logo h1 {
 
 header nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+header nav #nav-links {
+    display: flex;
+    gap: 1rem;
 }
 
 header nav ul {
@@ -70,6 +77,23 @@ header #navbar-toggle {
     border: none;
     color: #fff;
     cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav #nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    header nav #nav-links.show {
+        display: flex;
+    }
+
+    #navbar-toggle {
+        display: block;
+    }
 }
 
 /* Hero Section */
