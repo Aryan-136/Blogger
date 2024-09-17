@@ -4,72 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberSecure Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" title="Toggle dark mode">🌙</button>
 
     <!-- Navbar -->
     <header>
-        <nav>
-            <div class="logo">CyberSecure Blog</div>
-            <button id="navbar-toggle" aria-label="Toggle navigation">&#9776;</button>
-            <ul id="nav-links">
+        <nav class="navbar">
+            <div class="brand-title">CyberSecure Blog</div>
+            <a href="javascript:void(0);" class="navbar-toggle" id="navbar-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#blogs">Blogs</a></li>
                 <li><a href="#categories">Categories</a></li>
             </ul>
+            <button class="dark-mode-toggle" id="dark-mode-toggle">Toggle Dark Mode</button>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <section id="home" class="section fade-in">
-            <h1>Welcome to CyberSecure Blog</h1>
-            <p>Your go-to destination for the latest in cybersecurity trends, tips, and tutorials.</p>
-        </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section fade-in">
+        <h1>Welcome to CyberSecure Blog</h1>
+        <p>Your go-to place for cybersecurity insights and knowledge.</p>
+    </section>
 
-        <section id="about" class="section fade-in">
-            <h2>About Us</h2>
-            <p>We are dedicated to providing up-to-date and insightful articles on cybersecurity, hacking, and everything in between.</p>
-        </section>
+    <!-- About Section -->
+    <section id="about" class="about-section fade-in">
+        <h2>About Us</h2>
+        <p>CyberSecure Blog is dedicated to providing the latest news, tips, and tutorials on cybersecurity. Our mission is to empower individuals and organizations with the knowledge to stay safe online.</p>
+    </section>
 
-        <section id="blogs" class="section fade-in">
-            <h2>Latest Blogs</h2>
-            <div class="blog-card">
-                <h3>Understanding DDoS Attacks</h3>
-                <p>An in-depth look at how DDoS attacks work and how to defend against them.</p>
+    <!-- Blogs Section -->
+    <section id="blogs" class="blogs-section fade-in">
+        <h2>Latest Blogs</h2>
+        <div class="blog-cards">
+            <div class="blog-card fade-in">
+                <h3>Understanding Phishing Attacks</h3>
+                <p>Phishing attacks are on the rise. Learn how to identify and prevent phishing scams.</p>
             </div>
-            <div class="blog-card">
-                <h3>Top Cybersecurity Practices for 2024</h3>
-                <p>Learn the best cybersecurity practices to protect your business in 2024.</p>
+            <div class="blog-card fade-in">
+                <h3>Best Practices for Secure Passwords</h3>
+                <p>Learn how to create strong, secure passwords and manage them effectively.</p>
             </div>
-        </section>
+            <div class="blog-card fade-in">
+                <h3>Latest Trends in Cybersecurity</h3>
+                <p>Stay up to date with the most recent trends and challenges in the world of cybersecurity.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="categories" class="section fade-in">
-            <h2>Categories</h2>
-            <ul>
-                <li><a href="#">Network Security</a></li>
-                <li><a href="#">Ethical Hacking</a></li>
-                <li><a href="#">Cyber Laws</a></li>
-                <li><a href="#">DDoS Protection</a></li>
-            </ul>
-        </section>
-    </main>
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section fade-in">
+        <h2>Blog Categories</h2>
+        <div class="categories">
+            <button class="category-btn">All</button>
+            <button class="category-btn">Phishing</button>
+            <button class="category-btn">Passwords</button>
+            <button class="category-btn">Cyber Trends</button>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 CyberSecure Blog. All rights reserved.</p>
-        <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Disclaimer</a></li>
-        </ul>
-    </footer>
+    <!-- Scroll-to-Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top">Top</button>
 
-    <button id="scroll-to-top" title="Go to top">↑</button>
 </body>
 </html>
