@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
     navbarToggle.addEventListener('click', function () {
         navMenu.classList.toggle('show');
     });
-
+document.getElementById('navbar-toggle').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('show');
+});
     // Scroll-to-Top Button
     const scrollToTopButton = document.getElementById('scroll-to-top');
 
