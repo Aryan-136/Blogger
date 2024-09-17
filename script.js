@@ -9,13 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Responsive Navbar Toggle
-  const navbarToggle = document.getElementById('navbar-toggle');
+// Navbar Toggle
+const navbarToggle = document.getElementById('navbar-toggle');
 const navLinks = document.getElementById('nav-links');
 
 navbarToggle.addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
+    
 document.getElementById('navbar-toggle').addEventListener('click', function() {
     document.getElementById('nav-links').classList.toggle('show');
 });
