@@ -4,102 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog Website</title>
+    <title>Cybersecurity Blog</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
-
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <div class="logo">
-            <h1>My Blog</h1>
+            <h1>CyberSecure Blog</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#blogs">Blog</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#categories">Categories</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="navbar-toggle">&#9776;</button>
         </nav>
-        <button id="navbar-toggle">&#9776;</button>
     </header>
 
-    <!-- Hero Section (Home) -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <h2>Welcome to My Blog</h2>
-        <p>Explore the latest trends, insights, and stories from the tech world.</p>
-        <a href="#blogs" class="btn">Read the Blog</a>
+        <h2>Welcome to CyberSecure Blog</h2>
+        <p>Your go-to source for the latest in cybersecurity.</p>
+        <a href="#blogs" class="btn">Explore Blogs</a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Hello, I'm Aryan Pandya, a passionate tech blogger. Follow my blog to keep up with tech trends, coding tips, and more.</p>
+        <h2>About Us</h2>
+        <p>We provide insights and updates on cybersecurity to keep you informed and secure.</p>
     </section>
 
     <!-- Blog Section -->
     <section id="blogs" class="blogs">
-        <h2>Latest Blog Posts</h2>
-
-        <!-- Blog Post 1 -->
-        <article class="blog-post">
-            <h3><a href="blog-post-1.html">How to Stay Ahead in Cybersecurity</a></h3>
-            <p class="post-meta">Posted on September 17, 2024 by Aryan Pandya</p>
-            <p>In today’s digital age, cybersecurity is more important than ever. Learn how to protect yourself from the latest threats.</p>
-            <a href="blog-post-1.html" class="read-more">Read More</a>
-        </article>
-
-        <!-- Blog Post 2 -->
-        <article class="blog-post">
-            <h3><a href="blog-post-2.html">Top Programming Languages in 2024</a></h3>
-            <p class="post-meta">Posted on September 10, 2024 by Aryan Pandya</p>
-            <p>Which programming languages are dominating the tech world in 2024? Check out our comprehensive guide!</p>
-            <a href="blog-post-2.html" class="read-more">Read More</a>
-        </article>
-
-        <!-- Blog Post 3 -->
-        <article class="blog-post">
-            <h3><a href="blog-post-3.html">The Future of AI and Automation</a></h3>
-            <p class="post-meta">Posted on September 1, 2024 by Aryan Pandya</p>
-            <p>Discover how AI is changing industries and creating new opportunities for automation in various sectors.</p>
-            <a href="blog-post-3.html" class="read-more">Read More</a>
-        </article>
+        <h2>Latest Blogs</h2>
+        <div class="blog-post">
+            <h3><a href="#">Understanding Cybersecurity Threats</a></h3>
+            <p class="post-meta">Posted on September 20, 2024</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-post">
+            <h3><a href="#">Top 10 Cybersecurity Tips</a></h3>
+            <p class="post-meta">Posted on September 15, 2024</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <!-- Add more blog posts here -->
+        <div class="pagination">
+            <a href="#">« Previous</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next »</a>
+        </div>
     </section>
-
-    <!-- Pagination (For multiple pages of blog posts) -->
-    <div class="pagination">
-        <a href="#">&laquo; Previous</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">Next &raquo;</a>
-    </div>
 
     <!-- Categories Section -->
     <section id="categories" class="categories">
         <h2>Categories</h2>
         <ul>
-            <li><a href="#">Cybersecurity</a></li>
-            <li><a href="#">Programming</a></li>
-            <li><a href="#">AI & Machine Learning</a></li>
-            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Cyber Threats</a></li>
+            <li><a href="#">Data Protection</a></li>
+            <li><a href="#">Security Tips</a></li>
+            <li><a href="#">Tech News</a></li>
         </ul>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form" action="your-server-endpoint" method="POST">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="submit_form.php" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-            <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+
             <button type="submit">Send Message</button>
         </form>
     </section>
@@ -107,11 +98,11 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Aryan Pandya. All rights reserved.</p>
-            <ul class="social-icons">
-                <li><a href="https://www.linkedin.com/in/aryanpandya/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/aryanpandya" target="_blank">GitHub</a></li>
-                <li><a href="https://twitter.com/aryanpandya" target="_blank">Twitter</a></li>
+            <p>&copy; 2024 CyberSecure Blog. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </footer>
@@ -120,7 +111,6 @@
     <button id="scroll-to-top">&#9650;</button>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
