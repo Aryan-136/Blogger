@@ -1,184 +1,177 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #0e0e0e;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease-in-out;
 }
 
-header {
-    background-color: #333;
-    padding: 1rem;
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-nav {
+.nav-links {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    gap: 20px;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ff6347;
-    animation: fadeIn 2s ease-in;
-}
-
-#nav-links {
+.nav-links li {
     list-style: none;
-    display: flex;
-    gap: 2rem;
 }
 
-#nav-links li a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s ease;
 }
 
-#nav-links li a:hover {
-    background-color: #444;
-}
-
-#navbar-toggle {
+.navbar-toggle {
     display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
     cursor: pointer;
 }
 
-section {
-    margin-bottom: 40px;
-    padding: 60px;
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: white;
+}
+
+.dark-mode-toggle {
+    padding: 0.5rem 1rem;
+    background-color: #ff8800;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #ff6600;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem;
+    background-color: #111;
+    color: white;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
     text-align: center;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-in-out;
+/* About Section */
+.about-section {
+    padding: 3rem;
+    background-color: #222;
+    color: white;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Blogs Section */
+.blogs-section {
+    padding: 3rem;
+}
+
+.blog-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 .blog-card {
-    background-color: #222;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #444;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .blog-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
-/* Footer */
-footer {
+/* Categories Section */
+.categories-section {
+    padding: 3rem;
     background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
 }
 
-footer ul {
-    list-style: none;
+.categories {
     display: flex;
+    gap: 20px;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 10px;
 }
 
-footer ul li a {
+.category-btn {
+    padding: 0.5rem 1rem;
+    background-color: #555;
     color: white;
-    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-footer ul li a:hover {
-    text-decoration: underline;
+.category-btn:hover {
+    background-color: #777;
 }
 
 /* Scroll-to-Top Button */
-#scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    border-radius: 5px;
+.scroll-to-top {
     display: none;
-    cursor: pointer;
-}
-
-/* Dark Mode Toggle */
-#dark-mode-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #333;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff6600;
     color: white;
     border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
+    padding: 10px 15px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
-body.dark-mode {
-    background-color: #222;
-    color: #ddd;
-}
-
-/* Responsive Design */
+/* Media Queries */
 @media (max-width: 768px) {
-    #navbar-toggle {
+    .navbar-toggle {
         display: block;
     }
 
-    #nav-links {
+    .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #333;
         position: absolute;
         top: 60px;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
+        right: 10px;
+        background-color: #333;
+        padding: 1rem;
     }
 
-    #nav-links li {
-        margin: 0;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    #nav-links.show {
+    .nav-links.show {
         display: flex;
+    }
+
+    .blog-cards {
+        flex-direction: column;
     }
 }
 
-@media (max-width: 480px) {
-    section {
-        padding: 20px;
-    }
+.dark-mode {
+    background-color: #111;
+    color: #ccc;
 }
