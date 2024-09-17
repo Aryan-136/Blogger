@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #f4f4f4;
     background-color: #1c1c1c;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 a {
@@ -16,6 +17,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Header */
 header {
     background: #333;
     color: #fff;
@@ -25,10 +27,17 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header .logo h1 {
     margin: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul {
@@ -47,6 +56,7 @@ header nav ul li a {
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 header nav ul li a:hover {
@@ -62,6 +72,7 @@ header #navbar-toggle {
     cursor: pointer;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 6rem 2rem;
@@ -82,23 +93,32 @@ header #navbar-toggle {
 .hero .btn {
     background: #00ff99;
     color: #111;
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 2rem;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-.about, .blogs, .categories, .contact, .footer-content {
+.hero .btn:hover {
+    background: #00cc7a;
+}
+
+/* Main Content */
+.about, .blogs, .categories, .contact {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* About Section */
 .about p {
     font-size: 1.25rem;
 }
 
+/* Blog Section */
 .blogs h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -107,11 +127,18 @@ header #navbar-toggle {
     border: 1px solid #444;
     border-radius: 10px;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    background: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .blog-post h3 a {
     color: #00ff99;
+    font-size: 1.5rem;
 }
 
 .blog-post .post-meta {
@@ -124,8 +151,14 @@ header #navbar-toggle {
     margin-top: 1rem;
     color: #00ff99;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+.blog-post .read-more:hover {
+    color: #00cc7a;
+}
+
+/* Pagination */
 .pagination {
     text-align: center;
     margin: 2rem 0;
@@ -134,8 +167,15 @@ header #navbar-toggle {
 .pagination a {
     color: #00ff99;
     margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+.pagination a:hover {
+    color: #00cc7a;
+}
+
+/* Categories Section */
 .categories {
     background: #333;
     border: 1px solid #444;
@@ -153,6 +193,17 @@ header #navbar-toggle {
     margin: 0.5rem 0;
 }
 
+.categories ul li a {
+    color: #00ff99;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.categories ul li a:hover {
+    color: #00cc7a;
+}
+
+/* Contact Form */
 .contact form {
     display: grid;
     gap: 1rem;
@@ -165,35 +216,37 @@ header #navbar-toggle {
 }
 
 .contact input, .contact textarea {
-    padding: 0.5rem;
+    padding: 0.75rem;
     border: 1px solid #444;
     border-radius: 5px;
     background: #222;
     color: #fff;
+    font-size: 1rem;
 }
 
 .contact button {
     background: #00ff99;
     color: #111;
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
 }
 
 .contact button:hover {
     background: #00cc7a;
 }
 
+/* Footer */
 footer {
     background: #111;
     color: #fff;
     text-align: center;
     padding: 1rem 2rem;
-    position: fixed;
+    position: relative;
     width: 100%;
-    bottom: 0;
-    left: 0;
 }
 
 footer .footer-content {
@@ -204,6 +257,7 @@ footer .footer-content {
 .footer-content ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-content ul li {
@@ -213,8 +267,15 @@ footer .footer-content {
 
 .footer-content ul li a {
     color: #00ff99;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+.footer-content ul li a:hover {
+    color: #00cc7a;
+}
+
+/* Scroll-to-Top Button */
 #scroll-to-top {
     position: fixed;
     bottom: 2rem;
@@ -222,15 +283,18 @@ footer .footer-content {
     background: #00ff99;
     color: #111;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.5rem;
     display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 #scroll-to-top:hover {
     background: #00cc7a;
+    transform: scale(1.05);
 }
 
 /* Responsive Styles */
@@ -238,6 +302,7 @@ footer .footer-content {
     header nav ul {
         display: none;
         flex-direction: column;
+        gap: 0;
     }
 
     header nav ul.show {
@@ -246,5 +311,29 @@ footer .footer-content {
 
     #navbar-toggle {
         display: block;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .hero .btn {
+        padding: 0.5rem 1rem;
+    }
+
+    .blog-post h3 {
+        font-size: 1.25rem;
+    }
+
+    .contact input, .contact textarea {
+        font-size: 0.875rem;
+    }
+
+    .contact button {
+        font-size: 0.875rem;
     }
 }
